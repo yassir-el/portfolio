@@ -1,0 +1,31 @@
+.navbar li {
+    font-weight: 500;
+    color: #6B7280;
+    transition-duration: 200ms; 
+    font-size: inherit;
+    text-transform: capitalize;
+}
+
+.navbar li:hover {
+    transform: scale(1.1);
+    color: white;
+}
+
+@media only screen and (max-width: 786px) {
+    body {
+        /* background-color: lightblue; */
+
+    }
+
+    .navbar>ul {
+        display: none;
+    }
+
+    .navbar .mobile-ul {
+        display: flex;
+    }
+
+    .navbar .options-mobile {
+        display: block;
+    }
+}
