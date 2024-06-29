@@ -24,92 +24,212 @@ import githubImg from '../assets/github.svg'
 import dockerImg from '../assets/docker.svg'
 import k8sImg from '../assets/kubernetes.svg'
 
+import { styled } from '@mui/material/styles';
+import Button from '@mui/material/Button';
+import Tooltip, { TooltipProps, tooltipClasses } from '@mui/material/Tooltip';
+import Typography from '@mui/material/Typography';
+
+import cImg from '../assets/c-original.svg'
+import linuxImg from '../assets/linux.svg'
+import cppImg from '../assets/cplusplus-original.svg'
+
 // import graphqlImg from '../assets/graphql.svg'
 // import apolloImg from '../assets/apollo-graphql.svg'
 
+import './Skills.css'
 
-import { FaReact } from 'react-icons/fa'
+const frontend = [
+    {
+        name: 'HTML5',
+        icon: htmlImg
+    },
+    {
+        name: 'CSS3',
+        icon: cssImg
+    },
+    {
+        name: 'JavaScript',
+        icon: jsImg
+    },
+    {
+        name: 'TypeScript',
+
+        icon: typescriptImg
+    },
+    {
+        name: 'TailwindCSS',
+        icon: tailwindImg
+    },
+    {
+        name: 'React',
+        icon: reactImg
+    },
+    {
+        name: 'Redux',
+        icon: reduxImg
+    },
+    {
+        name: 'Next.js',
+        icon: nextJsImg
+    }
+]
+
+const backend = [
+    {
+        name: 'NodeJS',
+        icon: nodeImg
+    },
+    {
+        name: 'Express',
+        icon: expressImg
+    },
+    {
+        name: 'NestJS',
+        icon: nestJsImg
+    },
+    {
+        name: 'PostgreSQL',
+        icon: postgresImg
+    },
+    {
+        name: 'MongoDB',
+        icon: mongoImg
+    }
+]
+
+const other = [
+    {
+        name: 'C language',
+        icon: cImg
+    },
+    {
+        name: 'C++',
+        icon: cppImg
+    },
+    {
+        name: 'Docker',
+        icon: dockerImg
+    },
+    {
+        name: 'Git',
+        icon: gitImg
+    },
+    {
+        name: 'GitHub',
+        icon: githubImg
+    },
+    {
+        name: 'Linux',
+        icon: linuxImg
+    }
+
+]
+
+// const other = [
+//     {
+//         name: 'GraphQL',
+//         icon: graphqlImg
+//     },
+//     {
+//         name: 'Apollo GraphQL',
+//         icon: apolloImg
+//     },
+//     {
+//         name: 'C',
+//         icon: cImg
+//     },
+//     {    
+//         name: 'C++',
+//         icon: cppImg
+//     },
+//     {
+//         name: 'Linux',
+//         icon: linuxImg
+//     }
+// ]
+
+// import { FaReact } from 'react-icons/fa'
+
+const BootstrapTooltip = styled(({ className, ...props }) => (
+    <Tooltip {...props} arrow classes={{ popper: className }} />
+  ))(({ theme }) => ({
+  
+    [`& .${tooltipClasses.arrow}`]: {
+    
+      color: theme.palette.common.black,
+    },
+    [`& .${tooltipClasses.tooltip}`]: {
+      padding:"10px 20px",
+      fontSize: "15px",
+      backgroundColor: theme.palette.common.black,
+    },
+  }));
 
 const Skills = () => {
     return (
-        <div className='px-1 mt-20 mb-10'>
-            <h2 className='text-center sm:text-4xl text-2xl'>
-                Skills
-            </h2>
-            <div className='flex'>
-                <div className='flex flex-col items-center justify-center w-1/2'>
-                    <h3 className='text-3xl text-center mt-10 mb-5'>
+
+        <div className='px-1 pt-32' id="skills">
+            <div className='flex md:flex-row flex-col   '>
+                <div className='flex flex-col items-center  md:w-1/2 ' style={
+                    {
+                        border: '1px solid rgb(133 76 230 / 50%)',
+                    }
+                }>
+                    <h3 className='text-2xl sm:text-3xl text-center text-[white] mt-[-20px] bg-[#1C1C27] px-5'>
                         Frontend
                     </h3>
-                    <div className='flex flex-wrap justify-center'>
-                        <div className='m-2'>
-                            <img src={htmlImg} alt='html5' className='w-16 h-16' />
-                            <p className='text-center'>HTML5</p>
-                        </div>
-                        <div className='m-2'>
-                            <img src={cssImg} alt='css3' className='w-16 h-16' />
-                            <p className='text-center'>CSS3</p>
-                        </div>
-                        <div className='m-2'>
-                            <img src={jsImg} alt='javascript' className='w-16 h-16' />
-                            <p className='text-center'>JavaScript</p>
-                        </div>
-                        <div className='m-2'>
-                            <img src={typescriptImg} alt='typescript' className='w-16 h-16' />
-                            <p className='text-center'>TypeScript</p>
-                        </div>
-                        <div className='m-2'>
-                            <img src={tailwindImg} alt='tailwind' className='w-16 h-16' />
-                            <p className='text-center'>Tailwind</p>
-                        </div>
-                        <div className='m-2'>
-                            <img src={reactImg} alt='react' className='w-16 h-16' />
-                            <p className='text-center'>React</p>
-                        </div>
-                        <div className='m-2'>
-                            <img src={reduxImg} alt='redux' className='w-16 h-16' />
-                            <p className='text-center'>Redux</p>
-                        </div>
-                        <div className='m-2'>
-                            <img src={nextJsImg} alt='nextjs' className='w-16 h-16' />
-                            <p className='text-center'>Next.js</p>
-                        </div>
+                    <div className='flex flex-wrap justify-center py-5'>
+
+                        {
+                            frontend.map((item, index) => (
+                                <BootstrapTooltip enterTouchDelay={0} title={item.name} arrow>
+                                <div className='m-2' key={index}>
+                                    <img src={item.icon} alt={item.name} className='lg:w-16 lg:h-16 md:w-8 md:h-8 w-8 h-8  duration-300' />
+                                </div>
+                            </BootstrapTooltip>
+                            ))
+                        }
                     </div>
                 </div>
 
-                <div className='flex flex-col items-center justify-center w-1/2'>
-                    <h3 className='text-3xl text-center mt-10 mb-5'>
+                <div className='flex flex-col items-center  md:w-1/2' style={
+                    {
+                        border: '1px solid rgb(133 76 230 / 50%)',
+                    }
+                }>
+                    <h3 className='text-2xl sm:text-3xl text-center text-[white] mt-[-20px] bg-[#1C1C27] px-5'>
                         Backend
                     </h3>
-                    <div className='flex flex-wrap justify-center'>
-                        <div className='m-2'>
-                            <img src={nodeImg} alt='' className='w-16 h-16' />
-                            <p className='text-center'>NodeJS</p>
-                        </div>
-                        <div className='m-2'>
-                            <img src={expressImg} alt='express' className='w-16 h-16' />
-                            <p className='text-center'>Express</p>
-                        </div>
-                        <div className='m-2'>
-                            <img src={nestJsImg} alt='nestjs' className='w-16 h-16' />
-                            <p className='text-center'>Nest.js</p>
-                        </div>
-                        <div className='m-2'>
-                            <img src={postgresImg} alt='postgresql' className='w-16 h-16' />
-                            <p className='text-center'>postgres</p>
-                        </div>
-                        <div className='m-2'>
-                            <img src={dockerImg} alt='docker' className='w-16 h-16' />
-                            <p className='text-center'>Docker</p>
-                        </div>
-                        <div className='m-2'>
-                            <img src={gitImg} alt='git' className='w-16 h-16' />
-                            <p className='text-center'>Git</p>
-                        </div>
-                        <div className='m-2'>
-                            <img src={mongoImg} alt='mongodb' className='w-16 h-16' />
-                            <p className='text-center'>Mongodb</p>
-                        </div>
+                    <div className='flex flex-wrap justify-center py-5 '>
+                        {
+                            backend.map((item, index) => (
+                                <BootstrapTooltip enterTouchDelay={0} title={item.name} arrow>
+                                <div className='m-2' key={index}>
+                                    <img src={item.icon} alt={item.name} className='lg:w-16 lg:h-16 md:w-8 md:h-8 w-8 h-8   duration-300' />
+                                </div>
+                            </BootstrapTooltip>
+                            ))
+                        }
+                    </div>
+                </div>
+                <div className='flex flex-col items-center  md:w-1/2' style={
+                    {
+                        border: '1px solid rgb(133 76 230 / 50%)',
+                    }
+                }>
+                    <h3 className='text-2xl sm:text-3xl text-center text-[white] mt-[-20px] bg-[#1C1C27] px-5'>
+                        Others
+                    </h3>
+                    <div className='flex flex-wrap justify-center py-5 '>
+                        {
+                            other.map((item, index) => (
+                                <BootstrapTooltip enterTouchDelay={0} title={item.name} arrow>
+                                <div className='m-2' key={index}>
+                                    <img src={item.icon} alt={item.name} className='lg:w-16 lg:h-16 md:w-8 md:h-8 w-8 h-8   duration-300' />
+                                </div>
+                            </BootstrapTooltip>
+                            ))
+                        }
                     </div>
                 </div>
             </div>

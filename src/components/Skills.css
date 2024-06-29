@@ -1,0 +1,26 @@
+#skills .m-2 {
+    filter: brightness(0.5);
+    transition: filter 0.2s;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #F2F3F480;
+    gap: 3px;
+    padding: 20px;
+}
+
+#skills .m-2 p {
+    /* display: none;  */
+}
+
+#skills .m-2:hover img{
+    transform: scale(1.4);
+    /* display: block; */
+}
+
+#skills .m-2:hover {
+    opacity: 1;
+    filter: brightness(1);
+}
