@@ -7,6 +7,7 @@ import { FaBars } from "react-icons/fa";
 
 const NavBar = () => {
     const [optionsShow, setOptionsShow] = React.useState(false);
+    optionsShow ? document.body.style.overflow = 'hidden' : document.body.style.overflow = 'auto'
     return (
         <div className='sticky bg-[#191924] w-full top-0 h-20 z-50'>
 
@@ -20,8 +21,6 @@ const NavBar = () => {
                     <ul className='flex text-white text-[1.1rem] items-center flex-row align gap-6 capitalize' >
                         <a href="#home">
                             <li className=''>home</li>
-                        </a><a href="#about">
-                            <li>about</li>
                         </a><a href="#skills">
                             <li>skills</li>
                         </a><a href="#projects">
@@ -32,15 +31,16 @@ const NavBar = () => {
                     </ul>
                     {optionsShow ? <div className='mobile-ul hidden z-10 bg-[#191924] text-white p-0 m-0 fixed left-0 top-0  items-center h-full w-full justify-center '>
                         <ul className='flex text-4xl flex-col gap-6 text-white capitalize'>
-                            <a href="#home">
+                            <a href="#home" onClick={
+                                () =>
+                                    setOptionsShow(!optionsShow)
+                            }>
                                 <li>home</li>
-                            </a><a href="#about">
-                                <li>about</li>
-                            </a><a href="#skills">
+                            </a><a href="#skills" onClick={() =>setOptionsShow(!optionsShow)}>
                                 <li>skills</li>
-                            </a><a href="#projects">
+                            </a><a href="#projects" onClick={() => setOptionsShow(!optionsShow)}>
                                 <li>projects</li>
-                            </a><a href="#contact">
+                            </a><a href="#contact" onClick={() => setOptionsShow(!optionsShow)}>
                                 <li>contact</li>
                             </a>
                         </ul>
@@ -52,12 +52,12 @@ const NavBar = () => {
                     }>
                         {
                             optionsShow === false ? <FaBars size={30} />
-                                : <MdCancel size={30}/>
+                                : <MdCancel size={30} />
                         }
                     </div>
                 </div >
             </div>
-            
+
         </div>
     )
 }

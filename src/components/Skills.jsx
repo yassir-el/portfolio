@@ -1,40 +1,40 @@
 import React from 'react'
-import htmlImg from '../assets/html5.svg'
-import cssImg from '../assets/css3.svg'
-import jsImg from '../assets/javascript.svg'
-import typescriptImg from '../assets/typescript.svg'
+import htmlImg from '../assets/skills/html5.svg'
+import cssImg from '../assets/skills/css3.svg'
+import jsImg from '../assets/skills/javascript.svg'
+import typescriptImg from '../assets/skills/typescript.svg'
 
-import tailwindImg from '../assets/tailwindcss.svg'
+import tailwindImg from '../assets/skills/tailwindcss.svg'
 
-import reactImg from '../assets/react.svg'
-import nextJsImg from '../assets/nextjs.svg'
-import reduxImg from '../assets/redux.svg'
+import reactImg from '../assets/skills/react.svg'
+import nextJsImg from '../assets/skills/nextjs.svg'
+import reduxImg from '../assets/skills/redux.svg'
 
-import nodeImg from '../assets/nodejs.svg'
-import expressImg from '../assets/express.svg'
-import nestJsImg from '../assets/nestjs.svg'
+import nodeImg from '../assets/skills/nodejs.svg'
+import expressImg from '../assets/skills/express.svg'
+import nestJsImg from '../assets/skills/nestjs.svg'
 
-import mongoImg from '../assets/mongodb.svg'
-import postgresImg from '../assets/postgresql.svg'
-import mysqlImg from '../assets/mysql.svg'
+import mongoImg from '../assets/skills/mongodb.svg'
+import postgresImg from '../assets/skills/postgresql.svg'
+import mysqlImg from '../assets/skills/mysql.svg'
 
-import gitImg from '../assets/git.svg'
-import githubImg from '../assets/github.svg'
+import gitImg from '../assets/skills/git.svg'
+import githubImg from '../assets/skills/github.svg'
 
-import dockerImg from '../assets/docker.svg'
-import k8sImg from '../assets/kubernetes.svg'
+import dockerImg from '../assets/skills/docker.svg'
+import k8sImg from '../assets/skills/kubernetes.svg'
 
 import { styled } from '@mui/material/styles';
 import Button from '@mui/material/Button';
 import Tooltip, { TooltipProps, tooltipClasses } from '@mui/material/Tooltip';
 import Typography from '@mui/material/Typography';
 
-import cImg from '../assets/c-original.svg'
-import linuxImg from '../assets/linux.svg'
-import cppImg from '../assets/cplusplus-original.svg'
+import cImg from '../assets/skills/c-original.svg'
+import linuxImg from '../assets/skills/linux.svg'
+import cppImg from '../assets/skills/cplusplus-original.svg'
 
-// import graphqlImg from '../assets/graphql.svg'
-// import apolloImg from '../assets/apollo-graphql.svg'
+// import graphqlImg from '../assets/skills/graphql.svg'
+// import apolloImg from '../assets/skills/apollo-graphql.svg'
 
 import './Skills.css'
 
