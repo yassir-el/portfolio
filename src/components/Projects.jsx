@@ -122,7 +122,7 @@ const Projects = () => {
                 Tools:
               </h4>
               <div className='flex justify-between'>
-                <ul className='flex flex-wrapz px-4 py-2 gap-3'>
+                <ul className='flex flex-wrap px-4 py-2 gap-3'>
                   {
                     projectsData[show - 1].tools.map((e, index) =>
                       <li key={index} className='before:content-[""] before:mr-2 text-purple-400 text-2xl'>
