@@ -4,7 +4,23 @@ import Lottie from 'react-lottie';
 import animationData from '../assets/animation/mail-me.json'
 
 import { LuMessageSquare } from 'react-icons/lu'
-import { delay } from 'framer-motion';
+import { motion } from 'framer-motion'
+
+const variants = {
+    initial: {
+        y: 500,
+        opacity: 0
+    },
+    animate: {
+        y: 0,
+        opacity: 1,
+        transition: {
+            duration: 0.5,
+            staggerChildren: 0.2
+        }
+    }
+}
+
 
 const Contact = () => {
     return (
@@ -20,7 +36,7 @@ const Contact = () => {
         //     </form>
         //         <button type='submit' className='block w-full p-2 my-2 bg-[#854CE6] px-5 text-white rounded-md'>Submit</button>
         // </div>
-        <>
+        <div className='h-[90vh] overflow-hidden' >
 
             <div className='flex flex-col gap-7 text-4xl pb-4  pt-20'>
 
@@ -32,7 +48,9 @@ const Contact = () => {
                     Submit the form below to get in touch with me.
                 </p>
             </div>
-            <div id='contact' className=' mt-8 pb-16 flex items-center flex-row gap-14 justify-center'>
+            <motion.div id='contact' className=' mt-8 pb-16 flex items-center flex-row gap-14 justify-center ' variants={variants} initial='initial'
+                whileInView="animate"
+            >
                 <div>
 
                     <div className='w-96'>
@@ -67,9 +85,41 @@ const Contact = () => {
                         width={400}
                     />
                 </div>
+            </motion.div>
+            
+            <div className='more-inforamtion flex flex-col items-center'>
+                <div>
+                <p className=' text-gray-400 mt-5'>
+                    Phone:  +212 649 66 22 84
+                </p>
+                <p className=' text-gray-400'>
+                    Email: yassir.elmassafi@gmail.com
+                </p>
+                </div>
             </div>
 
-        </>
+            <div className='socials-links flex justify-center gap-5 mt-10'>
+                <a href="https://www.linkedin.com/in/yassir-el-massafi/" target='_blank' rel='noreferrer'>
+                    <img src="https://img.icons8.com/color/48/000000/linkedin.png" alt="linkedin" />
+                </a>
+                <a href="https://twitter.com/yassir_el_massafi" target='_blank' rel='noreferrer'>
+                    <img src="https://img.icons8.com/color/48/000000/twitter.png" alt="twitter" />
+                </a>
+                <a href="https://github.com/elyassir" target='_blank' rel='noreferrer'>
+                    <img src="https://img.icons8.com/color/48/000000/github--v1.png" alt="github" />
+                </a>
+            </div>
+            {
+                /*
+                
+                */
+            }
+            <div>
+                <p className='text-center text-gray-400 mt-10'>
+                    &copy; 2021 ElYassir. All rights reserved.
+                </p>
+            </div>
+        </div>
     )
 }
 
