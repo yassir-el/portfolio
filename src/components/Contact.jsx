@@ -1,5 +1,10 @@
 import React from 'react'
+
+import Lottie from 'react-lottie';
+import animationData from '../assets/animation/mail-me.json'
+
 import { LuMessageSquare } from 'react-icons/lu'
+import { delay } from 'framer-motion';
 
 const Contact = () => {
     return (
@@ -15,30 +20,56 @@ const Contact = () => {
         //     </form>
         //         <button type='submit' className='block w-full p-2 my-2 bg-[#854CE6] px-5 text-white rounded-md'>Submit</button>
         // </div>
-        <div id='contact' className=' mt-8 pb-16'>
-            <div className='gap-7 flex flex-col text-4xl text-center pb-4'>
-                <h3 className='flex flex-row gap-7 justify-center'>
+        <>
+
+            <div className='flex flex-col gap-7 text-4xl pb-4  pt-20'>
+
+                <h3 className='gap-7 flex justify-center'>
                     <LuMessageSquare className='' />
                     Contact Me
                 </h3>
-                <p className='text-2xl text-gray-400'>
+                <p className='text-2xl text-gray-400 text-center'>
                     Submit the form below to get in touch with me.
                 </p>
             </div>
-            <div>
-                <form action="https://getform.io/f/qbloonza" method='POST' className='flex flex-col justify-center items-center gap-5'>
+            <div id='contact' className=' mt-8 pb-16 flex items-center flex-row gap-14 justify-center'>
+                <div>
 
-                    <input type="text" name='name' placeholder='Enter your name' className='bg-transparent border py-2 px-4 w-[50%]'/>
-                    <input type="email" name='email' placeholder='Enter your email' className='bg-transparent border py-2 px-4 w-[50%]'/>
-                    <textarea placeholder='Enter your message' name="message" id="" rows={5} className='bg-transparent border py-2 px-4 w-[50%]'>
+                    <div className='w-96'>
+                        <form action="https://getform.io/f/qbloonza" method='POST' className='flex flex-col justify-center gap-5'>
 
-                    </textarea>
-                    <button className='w-fit border px-6 py-3'>
-                        Submit
-                    </button>
-                </form>
+                            <input type="text" name='name' placeholder='Enter your name' className='bg-transparent border py-4 px-4 ' />
+                            <input type="email" name='email' placeholder='Enter your email' className='bg-transparent border py-4 px-4 ' />
+                            <textarea placeholder='Enter your message' name="message" id="" rows={5} className='bg-transparent border py-2 px-4'>
+
+                            </textarea>
+                            <button className='w-fit border px-6 py-3 m-auto'>
+                                Submit
+                            </button>
+                        </form>
+                    </div>
+
+                </div>
+                <div>
+                    <Lottie
+                        options={
+                            {
+                                loop: true,
+                                autoplay: true,
+                                animationData: animationData,
+                                rendererSettings: {
+                                    preserveAspectRatio: "xMidYMid slice"
+                                }
+                            }
+                        }
+                        speed={0.5}
+                        height={400}
+                        width={400}
+                    />
+                </div>
             </div>
-        </div>
+
+        </>
     )
 }
 
