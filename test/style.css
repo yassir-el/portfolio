@@ -1,0 +1,47 @@
+@keyframes dash {
+  to {
+    stroke-dashoffset: 1000;
+  }
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+body {
+  font-size: 20px;
+  &.active {
+    .animated-line {
+      animation: dash 200s cubic-bezier(0.33, 0, 0.2, 1) infinite;
+    }
+
+    .delay-animated-line {
+      animation: dash 700s cubic-bezier(0.33, 0, 0.2, 1) infinite;
+      animation-delay: 5s;
+    }
+
+    .fade-last {
+      animation: fade 0.5s 1.5s cubic-bezier(0.33, 0, 0.2, 1) forwards;
+    }
+  }
+}
+
+.fade-last {
+  opacity: 0;
+}
+
+.device-tablet {
+  display: block;
+  width: 100%;
+}
+
+.animated-line,
+.delay-animated-line {
+  stroke-dasharray: 3764;
+  stroke-dashoffset: 3764;
+}

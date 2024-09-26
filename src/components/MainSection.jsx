@@ -15,7 +15,7 @@ const MainSection = () => {
   };
 
   return (
-    <div>
+    <div className='mt-28'>
       <div className='flex flex-row text-2xl min-h-[450px]'>
         <div className='flex  flex-col lg:flex-row gap-2 lg:p-6 '>
           <div className='flex w-full flex-col gap-12 lg:text-left justify-center'>
@@ -34,7 +34,10 @@ const MainSection = () => {
               </span>
             </h2>
             <p className=' sm:text-[20px] text-[15px]  text-[#F2F3F495] '>
-              I am a motivated and versatile individual, always eager to take on new challenges. With a passion for learning I am dedicated to delivering high-quality results. With a positive attitude and a growth mindset, I am ready to make a meaningful contribution and achieve great things.
+              I am a motivated and versatile individual, always eager to take on new challenges. <br /> 
+              With a passion for learning I am dedicated to delivering high-quality results. <br />
+              With a positive attitude and a growth mindset. <br />
+              I am ready to make a meaningful contribution and achieve great things. <br />
             </p>
           </div>
           <div className='w-full flex flex-row lg:justify-end justify-center '>

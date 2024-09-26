@@ -3,6 +3,11 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 
+- Add about me section with a picture of me from intra 42 like wis and a short description of me and my journey
+- Add certifications section with a list of certifications I have
+
+
+
 https://www.youtube.com/watch?v=0YFrGy_mzjY&t=3249s  contact me part
 
 ## Available Scripts

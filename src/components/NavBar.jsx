@@ -9,7 +9,7 @@ const NavBar = () => {
     const [optionsShow, setOptionsShow] = React.useState(false);
     optionsShow ? document.body.style.overflow = 'hidden' : document.body.style.overflow = 'auto'
     return (
-        <div className='sticky bg-[#191924] w-full top-0 h-20 z-50'>
+        <div className='fixed bg-[#191924] w-full top-0 h-20 z-50'>
 
             <div className=' w-full container max-w-[1300px] mx-auto'>
                 <div className='navbar flex justify-between py-6 text-black m-0'>
